@@ -1,44 +1,75 @@
+# X/Twitter Video Downloader
 <p align="center">
-  <a href="https://github.com/Lucasyao1985/x-video-downloader"><img alt="Release version" src="https://img.shields.io/github/v/release/Lucasyao1985/x-video-downloader?color=brightgreen&label=Latest&style=for-the-badge" /></a>
-  <a href="LICENSE"><img alt="License: Unlicense" src="https://img.shields.io/badge/-Unlicense-red.svg?style=for-the-badge" /></a>
-  <a href="https://github.com/Lucasyao1985/x-video-downloader/commits"><img alt="Commits" src="https://img.shields.io/github/commit-activity/m/Lucasyao1985/x-video-downloader?label=commits&style=for-the-badge" /></a>
+  <a href="https://github.com/Lucasyao1985/x-video-downloader">GitHub</a> | <a href="SKILL.md">SKILL.md</a>
+</p>
+<p align="center">
+  <a href="https://github.com/Lucasyao1985/x-video-downloader"><img alt="Release version" src="https://img.shields.io/github/v/release/Lucasyao1985/x-video-downloader?color=2da44e&label=Latest&style=for-the-badge" /></a>
+  <a href="https://github.com/Lucasyao1985/x-video-downloader/commits"><img alt="Last commit" src="https://img.shields.io/github/last-commit/Lucasyao1985/x-video-downloader?color=0969da&label=Last%20commit&style=for-the-badge" /></a>
+  <a href="README.zh-CN.md"><img alt="中文" src="https://img.shields.io/badge/中文-da3633?style=for-the-badge" /></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-2da44e?style=for-the-badge" /></a>
 </p>
 
-# X/Twitter 视频下载器 (x-video-downloader)
+---
 
-自动下载 X（Twitter）帖子中的视频，保存到指定位置。
+**X/Twitter Video Downloader is a [Claude Code](https://claude.ai) skill that automatically downloads videos from X/Twitter posts.** Provide a link, get the video saved to your specified location.
 
-## 功能特性
+<table>
+<tr><td><b>Direct video download</b></td><td>Extracts and downloads the video from any X/Twitter post containing media.</td></tr>
+<tr><td><b>Custom output</b></td><td>Supports custom save path and filename for each download.</td></tr>
+<tr><td><b>Auto-detection</b></td><td>Automatically identifies video URLs within X/Twitter links.</td></tr>
+<tr><td><b>MP4 output</b></td><td>Downloads videos in standard MP4 format.</td></tr>
+</table>
 
-- 从 X/Twitter 帖子链接提取视频
-- 支持自定义保存路径和文件名
-- 自动处理视频 URL 解析
+---
 
-## 安装
+## Quick Install
 
 ```bash
 git clone https://github.com/Lucasyao1985/x-video-downloader.git
 ```
 
-## 使用示例
+Place the folder in your Claude Code skills directory:
+- **Windows:** `C:\Users\<you>\.claude\skills\`
+- **macOS/Linux:** `~/.claude/skills/`
+
+## Usage
+
+Share an X/Twitter URL with video:
 
 ```
-下载这个视频：https://x.com/user/status/123
-
-Save this video https://x.com/user/status/123
+Download this video: https://x.com/user/status/123
 ```
 
-## Skill 文件结构
+Or specify a save path:
+
+```
+Save this video https://x.com/user/status/123 to D:\videos\
+```
+
+The skill auto-detects the video media in the post and saves it to the specified location.
+
+## How It Works
+
+```
+X/Twitter URL → [extract media URL] → [download] → MP4 file
+```
+
+The script parses the X/Twitter post, extracts the video media URL, downloads it, and saves it with the specified filename or a default name.
+
+## Project Structure
 
 ```
 x-video-downloader/
-├── SKILL.md           # 主技能文件
-├── README.md          # 项目说明
-├── 说明.txt           # 使用说明
-├── scripts/           # 执行脚本
-└── references/        # 参考资料
+├── SKILL.md                 # Skill definition
+├── README.md                # This file (English)
+├── README.zh-CN.md          # Chinese documentation
+├── scripts/
+│   └── download.sh          # Core download script
+└── references/
 ```
 
 ## License
 
-Unlicense
+MIT — see [LICENSE](LICENSE).
+
+Built with [opencode](https://github.com/anomalyco/opencode).
