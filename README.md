@@ -1,3 +1,12 @@
+<div align="center">
+
+[![Release version](https://img.shields.io/github/v/release/Lucasyao1985/x-video-downloader?color=brightgreen&label=Latest&style=for-the-badge)](https://github.com/Lucasyao1985/x-video-downloader/releases "Latest Release")
+[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/H5MNcFW63r "Discord")
+[![License: Unlicense](https://img.shields.io/badge/-Unlicense-red.svg?style=for-the-badge)](LICENSE "License")
+[![Commits](https://img.shields.io/github/commit-activity/m/Lucasyao1985/x-video-downloader?label=commits&style=for-the-badge)](https://github.com/Lucasyao1985/x-video-downloader/commits "Commit History")
+
+</div>
+
 # X/Twitter 视频下载器 (x-video-downloader)
 
 自动下载 X（Twitter）帖子中的视频，保存到指定位置。
@@ -35,4 +44,4 @@ x-video-downloader/
 
 ## License
 
-MIT
+Unlicense
